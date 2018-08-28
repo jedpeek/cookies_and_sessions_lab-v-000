@@ -10,10 +10,19 @@ class ProductsController < ApplicationController
       current_cart << @product.id
     else
       render 'index'
+    end
+  end
 
 
   def add
     @product = Product.find(params[:id])
     current_cart << @product.id
   end
+
+  private
+
+  def product_params
+    params.require(:product)
+  end
+    
 end
