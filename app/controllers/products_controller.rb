@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      current_cart << @product.id
+      cart << @product.id
     else
       render 'index'
     end
