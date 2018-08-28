@@ -4,6 +4,9 @@ class ProductsController < ApplicationController
     @cart = current_cart
   end
 
+  def create
+    @product = Product.new(product_params)
+
   def add
     @product = Product.find(params[:id])
     current_cart << @product.id
