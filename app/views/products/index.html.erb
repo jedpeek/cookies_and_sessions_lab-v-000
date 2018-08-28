@@ -1,5 +1,5 @@
 <h1>Here is your shopping cart </h1>
-  <%= form_for @product, action: 'add', method: 'post' do |f| %>
+  <%= form_tag @product, action: 'add', method: 'post' do |f| %>
   <%= f.text_field :product %>
   <%= f.submit :submit %>
   <% end %>
