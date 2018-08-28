@@ -8,7 +8,9 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       current_cart << @product.id
-      
+    else
+      render 'index'
+
 
   def add
     @product = Product.find(params[:id])
