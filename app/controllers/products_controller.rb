@@ -15,14 +15,7 @@ class ProductsController < ApplicationController
 
 
   def add
-    @product = Product.find(params[:id])
-    current_cart << @product.id
-  end
-
-  private
-
-  def product_params
-    params.require(:product).permit(:product)
+    cart << params[:product]
   end
 
 end
