@@ -1,8 +1,9 @@
 <h1>Here is your shopping cart </h1>
-  <%= form_tag controller: 'product', action: 'add', method: 'post' do |f| %>
-  <%= f.text_field :product %>
-  <%= f.submit :submit %>
-  <% end %>
+<%= form_tag ({controller: 'products',action: 'add', method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
 <ol>
   <% @cart.each do |p| %>
   <li><%= p.product %></li>
