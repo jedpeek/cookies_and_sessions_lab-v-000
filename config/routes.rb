@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
 
   root 'products#index'
-  get '/products/add'
+  post '/' => 'products/add'
   resources :products
 
   # Example of regular route:
