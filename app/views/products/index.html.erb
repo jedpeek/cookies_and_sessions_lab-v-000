@@ -1,5 +1,5 @@
 <h1>Here is your shopping cart </h1>
-<%= form_for @product do |f| %>
+  <%= form_for @product {action: 'add', method: 'post'} do |f| %>
   <%= f.text_field :product %>
   <%= f.submit :submit %>
   <% end %>
@@ -7,7 +7,7 @@
   <%= @cart %>
 
 
-  <%= form_for @product {action: 'add', method: 'post'} do |f| %>
+
 
   <input name=product>
   <input type=submit value='add to cart'>
