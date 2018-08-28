@@ -5,3 +5,10 @@
   <% end %>
 
   <%= @cart %>
+
+
+  <%= form_for @product {action: 'add', method: 'post'} do |f| %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
