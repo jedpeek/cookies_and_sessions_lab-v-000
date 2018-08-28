@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
 
-  root 'application#add'
+  root 'products#index'
   resources :products
 
   # Example of regular route:
