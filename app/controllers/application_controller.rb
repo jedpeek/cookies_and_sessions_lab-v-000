@@ -7,10 +7,4 @@ class ApplicationController < ActionController::Base
   def cart
     session[:cart] ||= []
   end
-  
-  private
-
-  def current_cart
-     
-   end
 end
