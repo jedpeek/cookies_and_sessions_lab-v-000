@@ -5,8 +5,7 @@ class ProductsController < ApplicationController
   def add
     @product = Product.find(params[:id])
 
-    cart = session[:cart] || []
-    cart << @product.id
+    current_cart << @product.id
 
     session[:cart] = cart
   end
