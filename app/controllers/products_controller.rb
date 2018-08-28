@@ -3,12 +3,12 @@ class ProductsController < ApplicationController
   end
 
   def add
-  @product = Product.find(params[:id])
+    @product = Product.find(params[:id])
 
-  cart = session[:cart] || []
-  cart << @product.id
+    cart = session[:cart] || []
+    cart << @product.id
 
-  session[:cart] = cart
-end
+    session[:cart] = cart
+  end
   end
 end
