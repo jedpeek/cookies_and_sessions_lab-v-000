@@ -10,5 +10,4 @@ class ProductsController < ApplicationController
 
     session[:cart] = cart
   end
-  end
 end
