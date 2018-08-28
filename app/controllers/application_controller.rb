@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
   def cart
     current_cart
   end
+  
+  private
 
   def current_cart
      session[:cart] ||= []
