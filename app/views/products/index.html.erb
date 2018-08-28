@@ -3,12 +3,7 @@
   <%= f.text_field :product %>
   <%= f.submit :submit %>
   <% end %>
+<ol>
+  <% @cart.each do |p| %>
+  <li><%= p.product %></li>
 
-  <%= @cart %>
-
-
-
-
-  <input name=product>
-  <input type=submit value='add to cart'>
-<% end %>
